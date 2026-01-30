@@ -17,13 +17,27 @@ public class OOPSBannerApp {
     public static void main(String[] args) {
         // UC implementations will be added step by step
 
-        System.out.println(" ********   ********   *********   ******** ");
-        System.out.println(" *      *   *      *   *        *  *        ");
-        System.out.println(" *      *   *      *   *        *  *        ");
-        System.out.println(" *      *   *      *   *********   ******** ");
-        System.out.println(" *      *   *      *   *                  * ");
-        System.out.println(" *      *   *      *   *                  * ");
-        System.out.println(" ********   ********   *           ******** ");
+
+        System.out.println(String.join(" ",
+                "********", " ", "********", " ", "*********", " ", "********"));
+
+        System.out.println(String.join(" ",
+                "*      *", " ", "*      *", " ", "*        *", " ", "*        "));
+
+        System.out.println(String.join(" ",
+                "*      *", " ", "*      *", " ", "*        *", " ", "*        "));
+
+        System.out.println(String.join(" ",
+                "*      *", " ", "*      *", " ", "*********", " ", "********"));
+
+        System.out.println(String.join(" ",
+                "*      *", " ", "*      *", " ", "*", "                ","*"));
+
+        System.out.println(String.join(" ",
+                "*      *", " ", "*      *", " ", "*", "                ","*"));
+
+        System.out.println(String.join(" ",
+                "********", " ", "********", " ", "*", "         ","********"));
 
     }
 }
