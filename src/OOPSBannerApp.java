@@ -4,12 +4,51 @@
  * A console-based Java application to demonstrate
  * Object-Oriented Programming concepts step by step.
  *
- * UC6: Refactor banner logic into static helper methods
+ * UC7: Store Character Pattern in an Inner Static Class
  *
  * @author YourName
  * @version 1.0
  */
 public class OOPSBannerApp {
+
+    /**
+     * Inner static class to encapsulate a character
+     * and its corresponding banner pattern.
+     */
+    static class CharacterPattern {
+
+        private char character;
+        private String[] pattern;
+
+        /**
+         * Constructor to initialize character pattern
+         *
+         * @param character banner character
+         * @param pattern   7-line banner pattern
+         */
+        public CharacterPattern(char character, String[] pattern) {
+            this.character = character;
+            this.pattern = pattern;
+        }
+
+        /**
+         * Returns the banner pattern
+         *
+         * @return String array representing character pattern
+         */
+        public String[] getPattern() {
+            return pattern;
+        }
+
+        /**
+         * Returns the character
+         *
+         * @return character value
+         */
+        public char getCharacter() {
+            return character;
+        }
+    }
 
     /**
      * Entry point of the application
@@ -18,69 +57,44 @@ public class OOPSBannerApp {
      */
     public static void main(String[] args) {
 
-        String[] oPattern = getOPattern();
-        String[] pPattern = getPPattern();
-        String[] sPattern = getSPattern();
+        CharacterPattern oPattern = new CharacterPattern('O', new String[]{
+                "********",
+                "*      *",
+                "*      *",
+                "*      *",
+                "*      *",
+                "*      *",
+                "********"
+        });
 
-        // Print OOPS banner row by row
+        CharacterPattern pPattern = new CharacterPattern('P', new String[]{
+                "*********",
+                "*        *",
+                "*        *",
+                "*********",
+                "*        ",
+                "*        ",
+                "*         "
+        });
+
+        CharacterPattern sPattern = new CharacterPattern('S', new String[]{
+                "********",
+                "*        ",
+                "*        ",
+                "********",
+                "        *",
+                "        *",
+                "********"
+        });
+
+        // Print OOPS banner using encapsulated patterns
         for (int i = 0; i < 7; i++) {
             System.out.println(
-                    oPattern[i] + " " +
-                            oPattern[i] + " " +
-                            pPattern[i] + " " +
-                            sPattern[i]
+                    oPattern.getPattern()[i] + " " +
+                            oPattern.getPattern()[i] + " " +
+                            pPattern.getPattern()[i] + " " +
+                            sPattern.getPattern()[i]
             );
         }
-    }
-
-    /**
-     * Builds banner pattern for character 'O'
-     *
-     * @return String array representing the pattern of O
-     */
-    private static String[] getOPattern() {
-        return new String[]{
-                "********",
-                "*      *",
-                "*      *",
-                "*      *",
-                "*      *",
-                "*      *",
-                "********"
-        };
-    }
-
-    /**
-     * Builds banner pattern for character 'P'
-     *
-     * @return String array representing the pattern of P
-     */
-    private static String[] getPPattern() {
-        return new String[]{
-                "*********",
-                "*        *",
-                "*        *",
-                "*********",
-                "*        ",
-                "*        ",
-                "*        "
-        };
-    }
-
-    /**
-     * Builds banner pattern for character 'S'
-     *
-     * @return String array representing the pattern of S
-     */
-    private static String[] getSPattern() {
-        return new String[]{
-                "********",
-                "*        ",
-                "*        ",
-                "********",
-                "        *",
-                "        *",
-                "********"
-        };
     }
 }
