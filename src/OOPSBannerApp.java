@@ -18,26 +18,32 @@ public class OOPSBannerApp {
         // UC implementations will be added step by step
 
 
-        System.out.println(String.join(" ",
-                "********", " ", "********", " ", "*********", " ", "********"));
+        String[] bannerLines = new String[7];
 
-        System.out.println(String.join(" ",
-                "*      *", " ", "*      *", " ", "*        *", " ", "*        "));
+        bannerLines[0] = String.join(" ",
+                "********", " ", "********", " ", "*********", " ", "********");
 
-        System.out.println(String.join(" ",
-                "*      *", " ", "*      *", " ", "*        *", " ", "*        "));
+        bannerLines[1] = String.join(" ",
+                "*      *", " ", "*      *", " ", "*        *", " ", "*        ");
 
-        System.out.println(String.join(" ",
-                "*      *", " ", "*      *", " ", "*********", " ", "********"));
+        bannerLines[2] = String.join(" ",
+                "*      *", " ", "*      *", " ", "*        *", " ", "*        ");
 
-        System.out.println(String.join(" ",
-                "*      *", " ", "*      *", " ", "*", "                ","*"));
+        bannerLines[3] = String.join(" ",
+                "*      *", " ", "*      *", " ", "*********", " ", "********");
 
-        System.out.println(String.join(" ",
-                "*      *", " ", "*      *", " ", "*", "                ","*"));
+        bannerLines[4] = String.join(" ",
+                "*      *", " ", "*      *", " ", "*", "                ", "*");
 
-        System.out.println(String.join(" ",
-                "********", " ", "********", " ", "*", "         ","********"));
+        bannerLines[5] = String.join(" ",
+                "*      *", " ", "*      *", " ", "*", "                ", "*");
+
+        bannerLines[6] = String.join(" ",
+                "********", " ", "********", " ", "*", "         ", "********");
+
+        for (String line : bannerLines) {
+            System.out.println(line);
+        }
 
     }
 }
