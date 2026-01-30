@@ -17,29 +17,28 @@ public class OOPSBannerApp {
     public static void main(String[] args) {
         // UC implementations will be added step by step
 
+        String[] bannerLines = {
+                String.join(" ",
+                        "********", " ", "********", " ", "*********", " ", "********"),
 
-        String[] bannerLines = new String[7];
+                String.join(" ",
+                        "*      *", " ", "*      *", " ", "*        *", " ", "*        "),
 
-        bannerLines[0] = String.join(" ",
-                "********", " ", "********", " ", "*********", " ", "********");
+                String.join(" ",
+                        "*      *", " ", "*      *", " ", "*        *", " ", "*        "),
 
-        bannerLines[1] = String.join(" ",
-                "*      *", " ", "*      *", " ", "*        *", " ", "*        ");
+                String.join(" ",
+                        "*      *", " ", "*      *", " ", "*********", " ", "********"),
 
-        bannerLines[2] = String.join(" ",
-                "*      *", " ", "*      *", " ", "*        *", " ", "*        ");
+                String.join(" ",
+                        "*      *", " ", "*      *", " ", "*", "                ", "*"),
 
-        bannerLines[3] = String.join(" ",
-                "*      *", " ", "*      *", " ", "*********", " ", "********");
+                String.join(" ",
+                        "*      *", " ", "*      *", " ", "*", "                ", "*"),
 
-        bannerLines[4] = String.join(" ",
-                "*      *", " ", "*      *", " ", "*", "                ", "*");
-
-        bannerLines[5] = String.join(" ",
-                "*      *", " ", "*      *", " ", "*", "                ", "*");
-
-        bannerLines[6] = String.join(" ",
-                "********", " ", "********", " ", "*", "         ", "********");
+                String.join(" ",
+                        "********", " ", "********", " ", "*", "         ", "********")
+        };
 
         for (String line : bannerLines) {
             System.out.println(line);
